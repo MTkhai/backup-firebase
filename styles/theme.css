@@ -1,0 +1,96 @@
+:root {
+    --bg-deep: #020617;
+    --card-bg: rgba(15, 23, 42, 0.8);
+    --gold: #fbbf24;
+    --cyan: #22d3ee;
+    --white: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, var(--bg-deep) 100%);
+    color: var(--white);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Hiệu ứng mờ ảo cho toàn bộ khung */
+.thanh-dia {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(251, 191, 36, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vang-kim {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom, #fff 20%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Nút bấm kiểu hiện đại */
+.an-ky {
+    background: linear-gradient(135deg, var(--cyan) 0%, #0ea5e9 100%);
+    color: var(--bg-deep);
+    border: none;
+    padding: 14px 28px;
+    margin: 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(34, 211, 238, 0.3);
+}
+
+.an-ky:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.5);
+    filter: brightness(1.1);
+}
+
+.an-ky.phu {
+    background: var(--glass);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+/* Khung câu hỏi & Đáp án */
+.khung-lua-chon {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.van-ban {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+}
+
+.thanh-diem {
+    font-size: 0.9rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.an { display: none; opacity: 0; }
